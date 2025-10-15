@@ -4,6 +4,6 @@ import retrofit2.Response
 import retrofit2.http.GET
 
 interface DriverApiService {
-    @GET("drivers?meeting_key=1270")
+    @GET("drivers?session_key=9889")
     suspend fun findAll(): Response<List<DriversApiModel>>
 }

@@ -6,8 +6,8 @@ fun DriversApiModel.toModel(): Driver {
     return Driver(
         this.full_name,
         this.driver_number,
-        this.country_code,
         this.headshot_url,
-        this.team_name
+        this.team_name,
+        this.team_colour
     )
 }
