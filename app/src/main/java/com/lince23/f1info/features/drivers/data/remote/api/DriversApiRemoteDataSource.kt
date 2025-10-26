@@ -1,4 +1,4 @@
-package com.lince23.f1info.features.drivers.data.remote
+package com.lince23.f1info.features.drivers.data.remote.api
 
 import com.lince23.f1info.core.api.ApiClient
 import com.lince23.f1info.features.drivers.domain.Driver

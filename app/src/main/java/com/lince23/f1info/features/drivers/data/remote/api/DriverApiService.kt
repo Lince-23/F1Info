@@ -1,4 +1,4 @@
-package com.lince23.f1info.features.drivers.data.remote
+package com.lince23.f1info.features.drivers.data.remote.api
 
 import retrofit2.Response
 import retrofit2.http.GET
