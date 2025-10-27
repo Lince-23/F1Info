@@ -1,9 +1,11 @@
 package com.lince23.f1info.features.drivers.domain
 
 data class Driver(
-    val fullName: String,
-    val number: String,
-    val image: String?,
-    val team: String,
-    val teamColor:String
+    val driverId: String,
+    val permanentNumber: String,
+    val code: String,
+    val url: String,
+    val givenName: String,
+    val familyName: String,
+    val nationality: String
 )
