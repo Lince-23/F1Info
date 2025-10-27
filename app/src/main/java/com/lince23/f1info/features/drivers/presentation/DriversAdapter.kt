@@ -5,10 +5,8 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import coil3.load
 import com.lince23.f1info.R
 import com.lince23.f1info.features.drivers.domain.Driver
-import androidx.core.graphics.toColorInt
 
 class DriversAdapter(private val driversList: List<Driver>) :
     RecyclerView.Adapter<DriversAdapter.ViewHolder>() {
@@ -19,10 +17,13 @@ class DriversAdapter(private val driversList: List<Driver>) :
         val tvDriverLastName: TextView
         val vLineColor: View
 
+        val tvDriverNumber: TextView
+
         init {
             tvDriverName = view.findViewById(R.id.tvDriverName)
             tvDriverLastName = view.findViewById(R.id.tvDriverLastName)
             vLineColor = view.findViewById(R.id.vLineColor)
+            tvDriverNumber = view.findViewById(R.id.tvDriverNumber)
         }
     }
 
@@ -36,6 +37,7 @@ class DriversAdapter(private val driversList: List<Driver>) :
     override fun onBindViewHolder(viewHolder: ViewHolder, position: Int) {
         viewHolder.tvDriverName.text = driversList[position].givenName
         viewHolder.tvDriverLastName.text = driversList[position].familyName
+        viewHolder.tvDriverNumber.text = driversList[position].permanentNumber
     }
 
     override fun getItemCount() = driversList.size
