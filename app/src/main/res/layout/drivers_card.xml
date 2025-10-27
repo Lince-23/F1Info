@@ -20,6 +20,13 @@
             android:layout_marginEnd="10dp"
             />
 
+        <TextView
+            android:id="@+id/tvDriverNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            tools:text="16"
+            android:textSize="60sp"
+            android:layout_marginEnd="10dp"/>
 
         <LinearLayout
             android:layout_width="wrap_content"
