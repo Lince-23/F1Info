@@ -37,7 +37,7 @@ class DriversAdapter(private val driversList: List<Driver>) :
     override fun onBindViewHolder(viewHolder: ViewHolder, position: Int) {
         viewHolder.tvDriverName.text = driversList[position].givenName
         viewHolder.tvDriverLastName.text = driversList[position].familyName
-        viewHolder.tvDriverNumber.text = driversList[position].permanentNumber
+        viewHolder.tvDriverNumber.text = driversList[position].permanentNumber.padStart(2,'0')
     }
 
     override fun getItemCount() = driversList.size
