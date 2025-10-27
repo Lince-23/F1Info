@@ -28,7 +28,7 @@ class DriversListViewModel(private val getDriversListUseCase: GetDriversListUseC
     }
 
     private fun isSuccess(drivers: List<Driver>) {
-        _uiState.value = UiState(drivers = drivers.sortedBy { it.team })
+        _uiState.value = UiState(drivers = drivers)
     }
 
     private fun onFailure(error: ErrorApp) {

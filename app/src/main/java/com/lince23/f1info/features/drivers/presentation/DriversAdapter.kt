@@ -1,10 +1,8 @@
 package com.lince23.f1info.features.drivers.presentation
 
-import android.graphics.Color
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import coil3.load
@@ -18,14 +16,12 @@ class DriversAdapter(private val driversList: List<Driver>) :
 
     class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         val tvDriverName: TextView
-        val tvDriverTeam: TextView
-        val ivDriver: ImageView
+        val tvDriverLastName: TextView
         val vLineColor: View
 
         init {
             tvDriverName = view.findViewById(R.id.tvDriverName)
-            tvDriverTeam = view.findViewById(R.id.tvDriverTeam)
-            ivDriver = view.findViewById(R.id.ivDriver)
+            tvDriverLastName = view.findViewById(R.id.tvDriverLastName)
             vLineColor = view.findViewById(R.id.vLineColor)
         }
     }
@@ -38,11 +34,8 @@ class DriversAdapter(private val driversList: List<Driver>) :
     }
 
     override fun onBindViewHolder(viewHolder: ViewHolder, position: Int) {
-        viewHolder.tvDriverName.text = driversList[position].fullName
-        viewHolder.tvDriverTeam.text = driversList[position].team
-        viewHolder.ivDriver.load(driversList[position].image)
-        val color = driversList[position].teamColor
-        viewHolder.vLineColor.setBackgroundColor("#$color".toColorInt())
+        viewHolder.tvDriverName.text = driversList[position].givenName
+        viewHolder.tvDriverLastName.text = driversList[position].familyName
     }
 
     override fun getItemCount() = driversList.size
