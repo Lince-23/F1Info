@@ -11,7 +11,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.lince23.f1info.R
 import com.lince23.f1info.core.api.ApiClient
 import com.lince23.f1info.features.drivers.data.DriversDataRepository
-import com.lince23.f1info.features.drivers.data.remote.DriversApiRemoteDataSource
+import com.lince23.f1info.features.drivers.data.remote.api.DriversApiRemoteDataSource
 import com.lince23.f1info.features.drivers.domain.GetDriversListUseCase
 
 class DriversListActivity : AppCompatActivity() {

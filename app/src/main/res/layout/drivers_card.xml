@@ -16,37 +16,39 @@
             android:id="@+id/vLineColor"
             android:layout_width="10dp"
             android:layout_height="match_parent"
+            android:background="@color/f1"
+            android:layout_marginEnd="10dp"
             />
 
-        <ImageView
-            android:id="@+id/ivDriver"
-            android:layout_width="80dp"
-            android:layout_height="80dp"
-            android:layout_marginRight="20dp"
-            android:layout_gravity="bottom"
-            />
+        <TextView
+            android:id="@+id/tvDriverNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            tools:text="16"
+            android:textSize="60sp"
+            android:layout_marginEnd="10dp"/>
 
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:layout_marginVertical="30dp">
+            android:layout_marginVertical="10dp">
 
 
             <TextView
                 android:id="@+id/tvDriverName"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textStyle="bold"
                 android:textSize="20sp"
-                tools:text="Charles LECLERC"/>
+                tools:text="Charles"/>
 
             <TextView
-                android:id="@+id/tvDriverTeam"
+                android:id="@+id/tvDriverLastName"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textSize="16sp"
-                tools:text="Scuderia Ferrari HP"/>
+                android:textSize="30sp"
+                android:textStyle="bold"
+                tools:text="Leclerc"/>
 
         </LinearLayout>
 

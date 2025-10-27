@@ -6,7 +6,7 @@ import retrofit2.converter.gson.GsonConverterFactory
 
 
 class ApiClient {
-    private val BASE_URL = "https://api.openf1.org/v1/"
+    private val BASE_URL = "https://api.jolpi.ca/ergast/f1/"
 
     private val retrofit: Retrofit = Retrofit.Builder()
         .baseUrl(BASE_URL)
