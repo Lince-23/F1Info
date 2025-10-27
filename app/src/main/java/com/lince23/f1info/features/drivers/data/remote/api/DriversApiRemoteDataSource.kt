@@ -11,11 +11,8 @@ class DriversApiRemoteDataSource(private val apiClient: ApiClient) {
         return withContext(Dispatchers.IO) {
             val apiService = apiClient.createService(DriverApiService::class.java)
             val resultDriver = apiService.findAll()
-
             if (resultDriver.isSuccessful && resultDriver.errorBody() == null) {
-                Result.success(resultDriver.body()!!.map { driversApiModel ->
-                    driversApiModel.toModel()
-                })
+                Result.success(resultDriver.body()!!.toDriver())
             } else {
                 Result.failure(ErrorApp.ServerError)
             }

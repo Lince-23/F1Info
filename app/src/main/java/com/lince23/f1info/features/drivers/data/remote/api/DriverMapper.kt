@@ -13,3 +13,9 @@ fun DriversApiModel.toModel(): Driver {
         this.nationality
     )
 }
+
+fun ApiResponse.toDriver(): List<Driver> {
+    return this.mrData.driverTable.drivers.map { driversApiModel ->
+        driversApiModel.toModel()
+    }
+}
